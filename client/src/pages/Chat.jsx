@@ -46,14 +46,14 @@ export default function Chat() {
     }
   }, [currentUser]);
   
-  // const handleChatChange = (chat) => {
-  //   setCurrentChat(chat);
-  // };
+  const handleChatChange = (chat) => {
+    setCurrentChat(chat);
+  };
   return (
     <>
       <Container>
         <div className="container">
-          <Contacts contacts={contacts} currentUser={currentUser} />
+          <Contacts contacts={contacts} currentUser={currentUser} changeChat = {handleChatChange}/>
           {/* {currentChat === undefined ? (
             <Welcome />
           ) : (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Logo from "../assets/logo.png";
 
-export default function Contacts({ contacts, currentUser }) {
+export default function Contacts({ contacts, currentUser,changeChat }) {
   const [currentUserName, setCurrentUserName] = useState(undefined);
   const [currentUserImage, setCurrentUserImage] = useState(undefined);
   const [currentSelected, setCurrentSelected] = useState(undefined);
@@ -16,7 +16,8 @@ export default function Contacts({ contacts, currentUser }) {
   }, [currentUser]);
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
-    currentUser(contact);
+    changeChat(contact)
+    // currentUser(contact);
   };
   return (
     <>
